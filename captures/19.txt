@@ -1,0 +1,27 @@
+POST /upnp/control/ContentDirectory HTTP/1.1
+X-AV-Physical-Unit-Info: pa="Network Audio Remote";
+X-AV-Client-Info: av=5.0; cn="Sony Corporation"; mn="Network Audio Remote"; mv="v1.0.0";
+Host: 10.0.0.1:64321
+User-Agent: UPnP/1.0 DLNADOC/1.50
+Content-Length: 438
+Content-Type: text/xml; charset="utf-8"
+SOAPACTION: "urn:schemas-upnp-org:service:ContentDirectory:1#Browse"
+
+<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:Browse xmlns:u="urn:schemas-upnp-org:service:ContentDirectory:1"><ObjectID>0</ObjectID><BrowseFlag>BrowseDirectChildren</BrowseFlag><Filter>*</Filter><StartingIndex>0</StartingIndex><RequestedCount>50000</RequestedCount><SortCriteria></SortCriteria></u:Browse></s:Body></s:Envelope>HTTP/1.1 200 OK
+Content-Length: 1036
+Content-Type: text/xml; charset="utf-8"
+EXT: 
+Connection: Keep-Alive
+Date: Wed, 16 Dec 2015 23:43:00 GMT
+Server: UPnP/1.0 SonyImagingDevice/1.0
+X-AV-Server-Info: av=5.0; hn=""; cn="Sony Corporation"; mn="SonyImagingDevice"; mv="1.0";
+X-AV-Physical-Unit-Info: pa=""; pl=;
+
+<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:BrowseResponse xmlns:u="urn:schemas-upnp-org:service:ContentDirectory:1"><Result>&lt;DIDL-Lite xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+xmlns=&quot;urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/&quot;
+xmlns:upnp=&quot;urn:schemas-upnp-org:metadata-1-0/upnp/&quot;
+xmlns:dlna=&quot;urn:schemas-dlna-org:metadata-1-0/&quot;
+xmlns:arib=&quot;urn:schemas-arib-or-jp:elements-1-0/&quot;
+xmlns:av=&quot;urn:schemas-sony-com:av&quot;&gt;
+&lt;container id=&quot;PhotoRoot&quot; restricted=&quot;1&quot; parentID=&quot;0&quot; childCount=&quot;1&quot;&gt;&lt;dc:title&gt;PhotoRoot&lt;/dc:title&gt;&lt;upnp:class&gt;object.container&lt;/upnp:class&gt;&lt;av:mediaClass&gt;P,V&lt;/av:mediaClass&gt;&lt;/container&gt;&lt;/DIDL-Lite&gt;
+</Result><NumberReturned>1</NumberReturned><TotalMatches>1</TotalMatches><UpdateID>1158990788</UpdateID></u:BrowseResponse></s:Body></s:Envelope>

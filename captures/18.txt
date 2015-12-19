@@ -1,0 +1,20 @@
+POST /upnp/control/ConnectionManager HTTP/1.1
+X-AV-Physical-Unit-Info: pa="Network Audio Remote";
+X-AV-Client-Info: av=5.0; cn="Sony Corporation"; mn="Network Audio Remote"; mv="v1.0.0";
+Host: 10.0.0.1:64321
+User-Agent: UPnP/1.0 DLNADOC/1.50
+Content-Length: 273
+Content-Type: text/xml; charset="utf-8"
+SOAPACTION: "urn:schemas-upnp-org:service:ConnectionManager:1#GetProtocolInfo"
+
+<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetProtocolInfo xmlns:u="urn:schemas-upnp-org:service:ConnectionManager:1"></u:GetProtocolInfo></s:Body></s:Envelope>HTTP/1.1 200 OK
+Content-Length: 511
+Content-Type: text/xml; charset="utf-8"
+EXT: 
+Connection: Keep-Alive
+Date: Wed, 16 Dec 2015 23:42:59 GMT
+Server: UPnP/1.0 SonyImagingDevice/1.0
+X-AV-Server-Info: av=5.0; hn=""; cn="Sony Corporation"; mn="SonyImagingDevice"; mv="1.0";
+X-AV-Physical-Unit-Info: pa=""; pl=;
+
+<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><s:Body><u:GetProtocolInfoResponse xmlns:u="urn:schemas-upnp-org:service:ConnectionManager:1"><Source>http-get:*:image/jpeg:DLNA.ORG_PN=JPEG_TN;DLNA.ORG_CI=1,http-get:*:image/jpeg:DLNA.ORG_PN=JPEG_SM;DLNA.ORG_CI=0,http-get:*:image/jpeg:DLNA.ORG_PN=JPEG_LRG;DLNA.ORG_CI=1,http-get:*:image/jpeg:*</Source><Sink></Sink></u:GetProtocolInfoResponse></s:Body></s:Envelope>
